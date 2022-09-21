@@ -19,6 +19,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -36,6 +37,7 @@ public class InstructorRegisterActivity extends AppCompatActivity {
     ConstraintLayout register;
     FirebaseAuth auth;
     ProgressDialog progressDialog;
+    MaterialCheckBox javaCourse, pmCourse, gdpCourse, bigdataCourse;
 
 
     @Override
@@ -51,6 +53,11 @@ public class InstructorRegisterActivity extends AppCompatActivity {
         enterStudentID = findViewById(R.id.id_enterStudentID);
         enterPassword = findViewById(R.id.id_enterPassword);
         enterConfirmPassword = findViewById(R.id.id_enterconfirmPassword);
+        javaCourse = findViewById(R.id.javaCourse);
+        pmCourse = findViewById(R.id.pmCourse);
+        gdpCourse = findViewById(R.id.gdpCourse);
+        bigdataCourse = findViewById(R.id.bigdataCourse);
+
         auth = FirebaseAuth.getInstance();
 
 
@@ -74,6 +81,28 @@ public class InstructorRegisterActivity extends AppCompatActivity {
                     String sID = enterStudentID.getText().toString();
                     String pass = enterPassword.getText().toString();
                     String confirmpass = enterConfirmPassword.getText().toString();
+                    String java = "";
+                    String pm = "";
+                    String gdp = "";
+                    String bigdata = "";
+                    String course = "";
+
+                    if (javaCourse.isChecked()) {
+                        java = "Java (13800),";
+                        course = java;
+                    }
+                    if (pmCourse.isChecked()) {
+                        pm = "Project Management (13800),";
+                        course = course + pm;
+                    }
+                    if (gdpCourse.isChecked()) {
+                        gdp = "GDP-1 (13800),";
+                        course = course + gdp;
+                    }
+                    if (bigdataCourse.isChecked()) {
+                        bigdata = "Big Data (13800),";
+                        course = course + bigdata;
+                    }
 
 
                     if (TextUtils.isEmpty(fname)) {
@@ -88,9 +117,11 @@ public class InstructorRegisterActivity extends AppCompatActivity {
                         Toast.makeText(InstructorRegisterActivity.this, "Enter confirm password", Toast.LENGTH_LONG).show();
                     } else if (!(pass.equals(confirmpass))) {
                         Toast.makeText(InstructorRegisterActivity.this, "password mismtach", Toast.LENGTH_LONG).show();
-                    }/* else if (TextUtils.isEmpty(course)) {
+                    }else if (course.equals("")) {
                         Toast.makeText(InstructorRegisterActivity.this, "select course ", Toast.LENGTH_LONG).show();
-                    }*/ else {
+                    }  else {
+                        String list = course;
+
                         progressDialog.show();
                         if (CommonUtils.isConnectedToInternet(InstructorRegisterActivity.this)) {
                             auth.createUserWithEmailAndPassword(sID, confirmpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -104,10 +135,10 @@ public class InstructorRegisterActivity extends AppCompatActivity {
                                         try {
                                             FirebaseDatabase database = FirebaseDatabase.getInstance();
                                             DatabaseReference myRef = database.getReference("UserDetails").child("Instructor");
-                                            String key = myRef.push().getKey();
+                                            String studentID = FirebaseAuth.getInstance().getUid();
 
-                                            RegistrationModel registrationModel = new RegistrationModel(fname, lname, sID, pass, "task");
-                                            myRef.child(key).setValue(registrationModel);
+                                            RegistrationModel registrationModel = new RegistrationModel(fname, lname, sID, pass, list,"instructor");
+                                            myRef.child(studentID).setValue(registrationModel);
 
                                         } catch (Exception e) {
 

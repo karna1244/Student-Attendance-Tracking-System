@@ -27,9 +27,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
 
 public class RegistrationActivity extends AppCompatActivity {
 
@@ -72,6 +69,7 @@ public class RegistrationActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
                 try {
 
@@ -141,7 +139,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                                                     DatabaseReference myRef = database.getReference("UserDetails").child("Student");
                                                     String studentID = FirebaseAuth.getInstance().getUid();
-                                                    RegistrationModel registrationModel = new RegistrationModel(fname, lname, sID, pass, list);
+                                                    RegistrationModel registrationModel = new RegistrationModel(fname, lname, sID, pass, list,"student");
                                                     myRef.child(studentID).setValue(registrationModel);
 
                                                 } catch (Exception e) {
@@ -172,6 +170,8 @@ public class RegistrationActivity extends AppCompatActivity {
         });
 
     }
+
+
 
     private void getEmailVerification(FirebaseAuth auth, String sID) {
         FirebaseUser firebaseAuth = FirebaseAuth.getInstance().getCurrentUser();

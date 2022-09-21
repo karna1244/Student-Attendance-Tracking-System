@@ -39,7 +39,8 @@ public class QRGeneratorActivity extends AppCompatActivity {
 
 
         try {
-            generateQRCode();
+            String subject=getIntent().getStringExtra("QRCODE");
+            generateQRCode(subject);
             showTimer();
         } catch (Exception e) {
             Toast.makeText(this, "error", Toast.LENGTH_LONG).show();
@@ -64,10 +65,10 @@ public class QRGeneratorActivity extends AppCompatActivity {
     }
     }
 
-    private void generateQRCode() {
+    private void generateQRCode(String subject) {
         QRCodeWriter writer = new QRCodeWriter();
         try {
-            BitMatrix bitMatrix = writer.encode("java", BarcodeFormat.QR_CODE, 512, 512);
+            BitMatrix bitMatrix = writer.encode(subject, BarcodeFormat.QR_CODE, 512, 512);
             int width = bitMatrix.getWidth();
             int height = bitMatrix.getHeight();
             Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);

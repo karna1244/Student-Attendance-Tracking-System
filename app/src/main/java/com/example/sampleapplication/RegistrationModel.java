@@ -6,6 +6,7 @@ public class RegistrationModel {
     String sid;
     String pass;
     String course;
+    String type;
 
     public RegistrationModel() {
     }
@@ -50,11 +51,20 @@ public class RegistrationModel {
         this.course = course;
     }
 
-    public RegistrationModel(String firstName, String lastName, String sid, String pass, String course) {
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public RegistrationModel(String firstName, String lastName, String sid, String pass, String course, String type) {
         FirstName = firstName;
         LastName = lastName;
         this.sid = sid;
         this.pass = pass;
         this.course = course;
+        this.type = type;
     }
 }
