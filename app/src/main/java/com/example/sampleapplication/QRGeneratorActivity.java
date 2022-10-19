@@ -1,7 +1,9 @@
 package com.example.sampleapplication;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -25,6 +27,8 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.nio.file.FileSystems;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class QRGeneratorActivity extends AppCompatActivity {
 
@@ -39,7 +43,10 @@ public class QRGeneratorActivity extends AppCompatActivity {
 
 
         try {
-            String subject=getIntent().getStringExtra("QRCODE");
+         //   String subject=getIntent().getStringExtra("QRCODE");
+            SharedPreferences sharedpreferences =getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
+            String subject = sharedpreferences.getString("CourseType", "");
+
             generateQRCode(subject);
             showTimer();
         } catch (Exception e) {
@@ -50,9 +57,22 @@ public class QRGeneratorActivity extends AppCompatActivity {
 
     private void showTimer() {
     try {
-        new CountDownTimer(30000, 1000) {
+
+
+
+        new CountDownTimer(300000, 1000) {
             public void onTick(long millisUntilFinished) {
-                ((TextView) findViewById(R.id.timerr)).setText("seconds remaining: " + millisUntilFinished / 1000);
+
+                NumberFormat f = new DecimalFormat("00");
+
+                long hour = (millisUntilFinished / 3600000) % 24;
+
+                long min = (millisUntilFinished / 60000) % 60;
+
+                long sec = (millisUntilFinished / 1000) % 60;
+
+                ((TextView) findViewById(R.id.timerr)).setText("seconds remaining: "+f.format(hour) +":" + f.format(min) + ":" + f.format(sec));
+                //       ((TextView) findViewById(R.id.timerr)).setText("seconds remaining: " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {

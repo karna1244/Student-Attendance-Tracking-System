@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +33,7 @@ import java.util.Map;
 public class InstructorEnrolledActivity extends AppCompatActivity {
 
 
-    ConstraintLayout logout;
+    ImageView logout;
     RecyclerView instructor_recylerlview;
     private DatabaseReference mDatabase;
     InstructorCourseAdapter instructorCourseAdapter;
@@ -46,7 +47,7 @@ public class InstructorEnrolledActivity extends AppCompatActivity {
 
         instructor_recylerlview = findViewById(R.id.student_recylerlview);
         instructor_recylerlview.setLayoutManager(new LinearLayoutManager(this));
-        logout=findViewById(R.id.logout);
+        logout=findViewById(R.id.id_logout);
 
         ArrayList<String> course = new ArrayList<>();
         if (CommonUtils.isConnectedToInternet(InstructorEnrolledActivity.this)) {

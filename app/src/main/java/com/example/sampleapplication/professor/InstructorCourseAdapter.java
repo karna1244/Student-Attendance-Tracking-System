@@ -1,6 +1,8 @@
 package com.example.sampleapplication.professor;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +45,11 @@ public class InstructorCourseAdapter extends RecyclerView.Adapter<InstructorCour
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, InstructorOptionsActivity.class);
+                SharedPreferences sharedpreferences =context.getSharedPreferences("MyPREFERENCES", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString("CourseType", listdata.get(position).toString());
+                editor.commit();
+                Intent intent=new Intent(context, IntructorHomePage.class);
                 intent.putExtra("CourseType",listdata.get(position).toString());
                 context.startActivity(intent);
             }

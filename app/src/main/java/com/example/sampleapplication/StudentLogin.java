@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -110,6 +111,9 @@ public class StudentLogin extends AppCompatActivity {
 
                     String emailUsername = _enter_username.getText().toString();
                     String passwordText = enter_paswword.getText().toString();
+
+
+
                     if (TextUtils.isEmpty(emailUsername)) {
                         Toast.makeText(StudentLogin.this, "Enter Mail", Toast.LENGTH_LONG).show();
                     } else if (TextUtils.isEmpty(passwordText)) {
@@ -117,6 +121,7 @@ public class StudentLogin extends AppCompatActivity {
                                 .show();
                     } else {
                         progressDialog.show();
+
 
                         if (CommonUtils.isConnectedToInternet(StudentLogin.this)) {
 
@@ -129,7 +134,12 @@ public class StudentLogin extends AppCompatActivity {
                                             if (task.isSuccessful()) {
                                                 verifyUserType(passwordText);
                                             } else {
-                                                Toast.makeText(StudentLogin.this, "Invalid Credentials", Toast.LENGTH_LONG).show();
+                                                task.addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        Toast.makeText(StudentLogin.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                                                    }
+                                                });
                                             }
                                         }
                                     });

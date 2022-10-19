@@ -18,6 +18,7 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.firebase.auth.AuthResult;
@@ -149,7 +150,12 @@ public class InstructorRegisterActivity extends AppCompatActivity {
                                         finish();
 
                                     } else {
-                                        Toast.makeText(InstructorRegisterActivity.this, "Registration UnSuccessfull", Toast.LENGTH_LONG).show();
+                                        task.addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(InstructorRegisterActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                                            }
+                                        });
                                     }
                                 }
                             });

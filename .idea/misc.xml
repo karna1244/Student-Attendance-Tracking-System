@@ -3,27 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/drawable/table_content_cell_bg.xml" value="0.255" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/drawable/table_header_cell_bg.xml" value="0.255" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_all_students_attendence.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_instructor_enrolled.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_instructor_options.xml" value="0.21014492753623187" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_qrgenerator.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_qrscanner.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_reset.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_student_attendence.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_student_enrolled_courses.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_student_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/activity_student_options.xml" value="0.25416666666666665" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/list_item.xml" value="0.20854700854700856" />
-        <entry key="..\:/Projectss/android/qrAttendence/app/src/main/res/layout/table_list_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/android/Autotrack/qrAttendence/app/src/main/res/layout/activity_instructor_enrolled.xml" value="0.19739583333333333" />
-        <entry key="..\:/android/Autotrack/qrAttendence/app/src/main/res/layout/activity_instructor_options.xml" value="0.19739583333333333" />
-        <entry key="..\:/android/Autotrack/qrAttendence/app/src/main/res/layout/activity_instructor_registration.xml" value="0.19739583333333333" />
-        <entry key="..\:/android/Autotrack/qrAttendence/app/src/main/res/layout/activity_registration.xml" value="0.19739583333333333" />
-        <entry key="..\:/android/Autotrack/qrAttendence/app/src/main/res/layout/activity_student_enrolled_courses.xml" value="0.19739583333333333" />
-        <entry key="..\:/android/Autotrack/qrAttendence/app/src/main/res/layout/activity_student_options.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/s545622/AndroidStudioProjects/qrAttendences/app/src/main/res/layout/activity_all_students_attendence.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/s545622/AndroidStudioProjects/qrAttendences/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/android/DroneReferences/qrAttendence/app/src/main/res/layout/activity_student_home_page.xml" value="0.19739583333333333" />
+        <entry key="..\:/android/DroneReferences/qrAttendence/app/src/main/res/layout/app_bar_student_home_page.xml" value="0.19739583333333333" />
+        <entry key="..\:/android/DroneReferences/qrAttendence/app/src/main/res/layout/fragment_home.xml" value="0.19739583333333333" />
+        <entry key="..\:/android/DroneReferences/qrAttendence/app/src/main/res/layout/nav_header_student_home_page.xml" value="0.19739583333333333" />
+        <entry key="..\:/android/DroneReferences/qrAttendence/app/src/main/res/menu/activity_main_drawer.xml" value="0.19739583333333333" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/drawable/dropdownss.xml" value="0.1715" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/activity_intructor_home_page.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/activity_student_home_page.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/app_bar_intructor_home_page.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/app_bar_student_home_page.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/content_intructor_home_page.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/fragment_home.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/fragment_home_instructor.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/nav_header_intructor_home_page.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/layout/nav_header_student_home_page.xml" value="0.19322916666666667" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/menu/activity_main_drawer.xml" value="0.75" />
+        <entry key="..\:/android/DroneReferences/qrAttendences/app/src/main/res/menu/activity_student_home_page_drawer.xml" value="0.33" />
       </map>
     </option>
   </component>

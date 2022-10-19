@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ import java.util.Map;
 
 public class StudentEnrolledCoursesActivity extends AppCompatActivity {
 
-    ConstraintLayout logout;
+    ImageView logout;
     RecyclerView student_recylerlview;
     private DatabaseReference mDatabase;
     StudentCourseAdapter studentCourseAdapter;
@@ -41,7 +42,7 @@ public class StudentEnrolledCoursesActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_enrolled_courses);
-        logout = findViewById(R.id.logout);
+        logout = findViewById(R.id.id_logout);
         student_recylerlview = findViewById(R.id.student_recylerlview);
         student_recylerlview.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<String> course = new ArrayList<>();
