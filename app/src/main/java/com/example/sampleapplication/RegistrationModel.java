@@ -60,12 +60,5 @@ public class RegistrationModel {
         this.type = type;
     }
 
-    public RegistrationModel(String firstName, String lastName, String sid, String pass, String course, String type) {
-        FirstName = firstName;
-        LastName = lastName;
-        this.sid = sid;
-        this.pass = pass;
-        this.course = course;
-        this.type = type;
-    }
+   
 }
