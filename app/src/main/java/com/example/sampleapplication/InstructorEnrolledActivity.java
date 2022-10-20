@@ -77,40 +77,6 @@ public class InstructorEnrolledActivity extends AppCompatActivity {
 
     }
 
-    private void getStudentCourses(ArrayList<String> course) {
-        progressDialog = new ProgressDialog(InstructorEnrolledActivity.this);
-        progressDialog.setMessage("Loading....");
-        progressDialog.show();
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("UserDetails").child("Instructor");
-        String studentID = FirebaseAuth.getInstance().getUid();
-        myRef.child(studentID).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                progressDialog.cancel();
-                Log.d("Instructor Course", snapshot.toString());
-                RegistrationModel post = snapshot.getValue(RegistrationModel.class);
-                course.clear();
-                String courseData = post.getCourse();
-                if(TextUtils.isEmpty(courseData)){
-
-                }else{
-                    if (!courseData.isEmpty()) {
-                        String arr[] = courseData.split(",");
-                        for (String a : arr) {
-                            System.out.println(a);
-                            course.add(a);
-                        }
-                        instructorCourseAdapter.notifyDataSetChanged();
-
-                    }
-
-                }
-
-
-            }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 progressDialog.cancel();
