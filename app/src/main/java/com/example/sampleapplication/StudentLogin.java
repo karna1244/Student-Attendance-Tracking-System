@@ -101,6 +101,7 @@ public class StudentLogin extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //try and exception class
 
                 try {
 
