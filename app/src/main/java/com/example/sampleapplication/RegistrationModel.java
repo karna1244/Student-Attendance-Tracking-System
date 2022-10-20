@@ -1,5 +1,6 @@
 package com.example.sampleapplication;
 
+//Navya
 public class RegistrationModel {
     String FirstName;
     String LastName;
