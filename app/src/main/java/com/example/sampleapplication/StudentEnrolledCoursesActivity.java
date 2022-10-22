@@ -66,6 +66,11 @@ public class StudentEnrolledCoursesActivity extends AppCompatActivity {
         });
     }
     
+    @Override
+    public void onBackPressed() {
+    
+    }
+
 
 
     
