@@ -99,3 +99,21 @@ public class RegistrationActivity extends AppCompatActivity {
                         bigdata = "Big Data (13800),";
                         course = course + bigdata;
                     }
+
+                    if (TextUtils.isEmpty(fname)) {
+                        Toast.makeText(RegistrationActivity.this, "Enter FirstName", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(lname)) {
+                        Toast.makeText(RegistrationActivity.this, "Enter LastName", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(sID)) {
+                        Toast.makeText(RegistrationActivity.this, "Enter id", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(pass)) {
+                        Toast.makeText(RegistrationActivity.this, "Enter password", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(confirmpass)) {
+                        Toast.makeText(RegistrationActivity.this, "Enter confirm password", Toast.LENGTH_LONG).show();
+                    } else if (!(pass.equals(confirmpass))) {
+                        Toast.makeText(RegistrationActivity.this, "password mismtach", Toast.LENGTH_LONG).show();
+                    } else if (course.equals("")) {
+                        Toast.makeText(RegistrationActivity.this, "select course ", Toast.LENGTH_LONG).show();
+                    } else {
+                        String list = course;
+                        progressDialog.show();
