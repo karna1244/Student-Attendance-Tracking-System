@@ -14,6 +14,16 @@
         android:layout_height="match_parent">
 
 
+    <ImageView
+        android:id="@+id/id_back"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     
     </androidx.constraintlayout.widget.ConstraintLayout>
 
