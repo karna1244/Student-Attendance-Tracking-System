@@ -204,7 +204,21 @@
         android:padding="@dimen/_8sdp"
         app:layout_constraintTop_toBottomOf="@id/text_confirmpassword">
 
-        
+        <EditText
+            android:id="@+id/id_enterconfirmPassword"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/color_cursor"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
