@@ -260,7 +260,21 @@
             android:layout_marginTop="@dimen/_16sdp"
             app:layout_constraintTop_toBottomOf="@id/pmCourse"
             android:text="GDP-1 (13800)"/>
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:id="@+id/bigdataCourse"
+            android:textColor="@color/black"
+            android:buttonTint="@color/black"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/gdpCourse"
+            android:text="Big Data (13800)"/>
 
+
+
+    
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
