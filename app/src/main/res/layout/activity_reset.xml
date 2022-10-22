@@ -67,6 +67,19 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+         <TextView
+            android:id="@+id/text_newpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/new_password"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_faculty_layout" />
+
+        
        
 
     
