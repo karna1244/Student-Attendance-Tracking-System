@@ -51,7 +51,21 @@ public class StudentEnrolledCoursesActivity extends AppCompatActivity {
         } else {
             Toast.makeText(StudentEnrolledCoursesActivity.this, "No Internet Connection....", Toast.LENGTH_SHORT).show();
         }
+        studentCourseAdapter = new StudentCourseAdapter(this, course);
+        student_recylerlview.setAdapter(studentCourseAdapter);
+    
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(StudentEnrolledCoursesActivity.this, StudentLogin.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     
+
 
     
