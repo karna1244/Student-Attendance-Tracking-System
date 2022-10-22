@@ -157,6 +157,24 @@ public class RegistrationActivity extends AppCompatActivity {
                                         }
                                     });
 
+
+                                    }else{
+                            Toast.makeText(RegistrationActivity.this, "No Internet Connection..", Toast.LENGTH_LONG).show();
+                        }
+
+
+                    }
+
+                } catch (Exception exception) {
+                    Toast.makeText(RegistrationActivity.this, "Try again after sometime", Toast.LENGTH_LONG).show();
+                }
+
+
+            }
+        });
+
+    }
+
                         
 
 }
