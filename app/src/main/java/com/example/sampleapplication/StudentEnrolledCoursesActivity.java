@@ -40,7 +40,18 @@ public class StudentEnrolledCoursesActivity extends AppCompatActivity {
         logout = findViewById(R.id.id_logout);
         student_recylerlview = findViewById(R.id.student_recylerlview);
         student_recylerlview.setLayoutManager(new LinearLayoutManager(this));
-    } 
-
+        ArrayList<String> course = new ArrayList<>();
+        if (CommonUtils.isConnectedToInternet(StudentEnrolledCoursesActivity.this)) {
+            try {
+                updatePassword();
+                getStudentCourses(course);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            Toast.makeText(StudentEnrolledCoursesActivity.this, "No Internet Connection....", Toast.LENGTH_SHORT).show();
+        }
+    }
+    
 
     
