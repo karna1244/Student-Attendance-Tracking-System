@@ -101,3 +101,21 @@ public class InstructorRegisterActivity extends AppCompatActivity {
                         bigdata = "Big Data (13800),";
                         course = course + bigdata;
                     }
+
+
+                    if (TextUtils.isEmpty(fname)) {
+                        Toast.makeText(InstructorRegisterActivity.this, "Enter FirstName", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(lname)) {
+                        Toast.makeText(InstructorRegisterActivity.this, "Enter LastName", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(sID)) {
+                        Toast.makeText(InstructorRegisterActivity.this, "Enter id", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(pass)) {
+                        Toast.makeText(InstructorRegisterActivity.this, "Enter password", Toast.LENGTH_LONG).show();
+                    } else if (TextUtils.isEmpty(confirmpass)) {
+                        Toast.makeText(InstructorRegisterActivity.this, "Enter confirm password", Toast.LENGTH_LONG).show();
+                    } else if (!(pass.equals(confirmpass))) {
+                        Toast.makeText(InstructorRegisterActivity.this, "password mismtach", Toast.LENGTH_LONG).show();
+                    }else if (course.equals("")) {
+                        Toast.makeText(InstructorRegisterActivity.this, "select course ", Toast.LENGTH_LONG).show();
+                    }  else {
+                        String list = course;
