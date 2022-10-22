@@ -34,10 +34,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/id_back" />
 
-    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="#DFDBDB"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/text_firstname">
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
