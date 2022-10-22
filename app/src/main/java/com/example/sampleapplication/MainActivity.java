@@ -19,5 +19,13 @@ public class MainActivity extends AppCompatActivity {
         studentLayout=findViewById(R.id.id_student_layout);
         professorLayout=findViewById(R.id.id_instructor_layout);
 
-        
+        studentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,StudentLogin.class);
+                startActivity(intent);
+            }
+        });
+
+       
 }
