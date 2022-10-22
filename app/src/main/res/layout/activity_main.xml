@@ -6,5 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:alpha="0.5"
+        android:background="@drawable/northwest"
+        android:layout_height="match_parent"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
