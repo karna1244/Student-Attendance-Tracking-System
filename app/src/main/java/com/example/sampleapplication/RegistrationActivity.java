@@ -28,3 +28,16 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+public class RegistrationActivity extends AppCompatActivity {
+
+
+    TextView text_studentid;
+    ImageView back;
+    EditText enterFirstName, enterLastName, enterStudentID, enterPassword, enterConfirmPassword;
+    ConstraintLayout register;
+    FirebaseAuth auth;
+    ProgressDialog progressDialog;
+    MaterialCheckBox javaCourse, pmCourse, gdpCourse, bigdataCourse;
+
+
