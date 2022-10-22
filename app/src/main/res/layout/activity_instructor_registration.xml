@@ -174,7 +174,21 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-   
+    <!-- Confirm Password-->
+
+    <TextView
+        android:id="@+id/text_confirmpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/black"
+
+        android:text="Confirm Password*"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_layout" />
+
+    
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
