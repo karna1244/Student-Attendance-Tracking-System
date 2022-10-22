@@ -31,7 +31,17 @@
         android:textSize="@dimen/_16sdp"
         android:layout_height="wrap_content"/>
 
-   
+    <View
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:id="@+id/viewLine"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/black"
+        android:layout_height="2dp"/>
+    
+
 
 
 
