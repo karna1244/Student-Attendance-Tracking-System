@@ -41,4 +41,25 @@ public class InstructorRegisterActivity extends AppCompatActivity {
     MaterialCheckBox javaCourse, pmCourse, gdpCourse, bigdataCourse;
 
 
-    
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_instructor_registration);
+
+        text_studentid = findViewById(R.id.text_studentid);
+        back = findViewById(R.id.id_back);
+        register = findViewById(R.id.id_login);
+        enterFirstName = findViewById(R.id.id_enterFirstName);
+        enterLastName = findViewById(R.id.id_enterLastName);
+        enterStudentID = findViewById(R.id.id_enterStudentID);
+        enterPassword = findViewById(R.id.id_enterPassword);
+        enterConfirmPassword = findViewById(R.id.id_enterconfirmPassword);
+        javaCourse = findViewById(R.id.javaCourse);
+        pmCourse = findViewById(R.id.pmCourse);
+        gdpCourse = findViewById(R.id.gdpCourse);
+        bigdataCourse = findViewById(R.id.bigdataCourse);
+
+        auth = FirebaseAuth.getInstance();
+
+
+        
