@@ -28,9 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-
 public class InstructorRegisterActivity extends AppCompatActivity {
-
 
     TextView spinner_btn, text_studentid;
     ImageView back;
@@ -39,7 +37,6 @@ public class InstructorRegisterActivity extends AppCompatActivity {
     FirebaseAuth auth;
     ProgressDialog progressDialog;
     MaterialCheckBox javaCourse, pmCourse, gdpCourse, bigdataCourse;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,4 +59,9 @@ public class InstructorRegisterActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
 
-        
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
