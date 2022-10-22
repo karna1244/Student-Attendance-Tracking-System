@@ -63,3 +63,22 @@ public class RegistrationActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                try {
+
+                    progressDialog = new ProgressDialog(RegistrationActivity.this);
+                    progressDialog.setMessage("Loading....");
+                    String fname = enterFirstName.getText().toString();
+                    String lname = enterLastName.getText().toString();
+                    String sID = enterStudentID.getText().toString();
+                    String pass = enterPassword.getText().toString();
+                    String confirmpass = enterConfirmPassword.getText().toString();
+                    String java = "";
+                    String pm = "";
+                    String gdp = "";
+                    String bigdata = "";
+                    String course = "";
