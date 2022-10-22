@@ -8,3 +8,9 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+public class MainActivity extends AppCompatActivity {
+
+    LinearLayout studentLayout,professorLayout;
+
+    
+}
