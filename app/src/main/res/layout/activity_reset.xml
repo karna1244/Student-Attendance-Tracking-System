@@ -43,7 +43,32 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/id_faculty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:background="@drawable/rectangle"
+            android:backgroundTint="#DFDBDB"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintTop_toBottomOf="@id/text_facultyID">
+
+            <EditText
+                android:id="@+id/id_enterFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+       
+
     
 
 
