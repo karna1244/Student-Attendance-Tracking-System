@@ -27,3 +27,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+
+
+public class InstructorRegisterActivity extends AppCompatActivity {
+
+
+    TextView spinner_btn, text_studentid;
+    ImageView back;
+    EditText enterFirstName, enterLastName, enterStudentID, enterPassword, enterConfirmPassword;
+    ConstraintLayout register;
+    FirebaseAuth auth;
+    ProgressDialog progressDialog;
+    MaterialCheckBox javaCourse, pmCourse, gdpCourse, bigdataCourse;
+
+
+    
