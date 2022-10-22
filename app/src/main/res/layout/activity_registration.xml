@@ -49,7 +49,18 @@
         android:padding="@dimen/_8sdp"
         app:layout_constraintTop_toBottomOf="@id/text_firstname">
 
-        
+        <EditText
+            android:id="@+id/id_enterFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
