@@ -53,6 +53,19 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
+     <TextView
+        android:layout_width="wrap_content"
+        android:text="Or"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16sdp"
+        android:id="@+id/id_or_text"
+        app:layout_constraintTop_toBottomOf="@id/id_instructor_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
