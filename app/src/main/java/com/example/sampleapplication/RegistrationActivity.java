@@ -57,4 +57,9 @@ public class RegistrationActivity extends AppCompatActivity {
         gdpCourse = findViewById(R.id.gdpCourse);
         bigdataCourse = findViewById(R.id.bigdataCourse);
 
-        
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
