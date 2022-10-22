@@ -29,5 +29,19 @@
         app:layout_constraintTop_toBottomOf="@id/id_back" />
 
 
+    <TextView
+        android:id="@+id/text_instructorlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/student_login"
+        android:textColor="@color/bluecolor"
+        android:textSize="@dimen/_22sdp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_instructor_profile" />
+
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>
