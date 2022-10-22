@@ -6,5 +6,14 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".StudentEnrolledCoursesActivity">
+ <ImageView
+        android:layout_width="@dimen/_30sdp"
+        android:src="@drawable/ic_logout"
+        android:id="@+id/id_logout"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="@dimen/_30sdp"/>
 
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
