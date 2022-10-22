@@ -84,3 +84,20 @@ public class InstructorRegisterActivity extends AppCompatActivity {
                     String gdp = "";
                     String bigdata = "";
                     String course = "";
+
+                    if (javaCourse.isChecked()) {
+                        java = "Java (13800),";
+                        course = java;
+                    }
+                    if (pmCourse.isChecked()) {
+                        pm = "Project Management (13800),";
+                        course = course + pm;
+                    }
+                    if (gdpCourse.isChecked()) {
+                        gdp = "GDP-1 (13800),";
+                        course = course + gdp;
+                    }
+                    if (bigdataCourse.isChecked()) {
+                        bigdata = "Big Data (13800),";
+                        course = course + bigdata;
+                    }
