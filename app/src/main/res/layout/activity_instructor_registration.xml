@@ -85,7 +85,18 @@
         android:padding="@dimen/_8sdp"
         app:layout_constraintTop_toBottomOf="@id/text_lastname">
 
-       
+        <EditText
+            android:id="@+id/id_enterLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textColor="@color/black"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
