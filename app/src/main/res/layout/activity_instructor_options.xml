@@ -55,4 +55,23 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_scanQRCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="@color/bluecolor"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@id/id_showAttendence"
+        >
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
