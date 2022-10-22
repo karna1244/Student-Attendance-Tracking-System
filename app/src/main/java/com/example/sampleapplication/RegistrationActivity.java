@@ -118,6 +118,45 @@ public class RegistrationActivity extends AppCompatActivity {
                         String list = course;
                         progressDialog.show();
 
+                        if(CommonUtils.isConnectedToInternet(RegistrationActivity.this)){
+
+                            auth = FirebaseAuth.getInstance();
+                            auth.createUserWithEmailAndPassword(sID, pass)
+                                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                            progressDialog.cancel();
+                                            if (task.isSuccessful()) {
+                                                getEmailVerification(auth, sID);
+
+                                                Toast.makeText(RegistrationActivity.this, "Registration Successfull", Toast.LENGTH_LONG).show();
+
+                                                try {
+                                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                                    DatabaseReference myRef = database.getReference("UserDetails").child("Student");
+                                                    String studentID = FirebaseAuth.getInstance().getUid();
+                                                    RegistrationModel registrationModel = new RegistrationModel(fname, lname, sID, pass, list,"student");
+                                                    myRef.child(studentID).setValue(registrationModel);
+
+                                                } catch (Exception e) {
+
+                                                }
+
+                                                Intent intent = new Intent(RegistrationActivity.this, StudentLogin.class);
+                                                startActivity(intent);
+                                                finish();
+                                            } else {
+                                           task.addOnFailureListener(new OnFailureListener() {
+                                               @Override
+                                               public void onFailure(@NonNull Exception e) {
+                                                      Toast.makeText(RegistrationActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                                               }
+                                           });
+                                           //     Toast.makeText(RegistrationActivity.this, "Registration UnSuccessfull", Toast.LENGTH_LONG).show();
+                                            }
+                                        }
+                                    });
+
                         
 
 }
