@@ -42,6 +42,29 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/id_instructor_profile" />
 
-    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/rectangle"
+        android:backgroundTint="#DFDBDB"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/text_instructorlogin">
+
+        <ImageView
+            android:id="@+id/image_user"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
