@@ -27,5 +27,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       
+        professorLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,ProfessorLogin.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
