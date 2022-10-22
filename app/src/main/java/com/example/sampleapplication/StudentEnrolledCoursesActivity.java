@@ -23,3 +23,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 }
+
+public class StudentEnrolledCoursesActivity extends AppCompatActivity {
+
+    ImageView logout;
+    RecyclerView student_recylerlview;
+    private DatabaseReference mDatabase;
+    StudentCourseAdapter studentCourseAdapter;
+    ProgressDialog progressDialog;
+
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_student_enrolled_courses);
+        logout = findViewById(R.id.id_logout);
+        student_recylerlview = findViewById(R.id.student_recylerlview);
+        student_recylerlview.setLayoutManager(new LinearLayoutManager(this));
+    } 
+
+
+    
