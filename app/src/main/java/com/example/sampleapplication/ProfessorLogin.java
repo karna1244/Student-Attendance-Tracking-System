@@ -56,4 +56,13 @@ public class ProfessorLogin extends AppCompatActivity {
         });
 
 
+        createaccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfessorLogin.this, InstructorRegisterActivity.class);
+
+                startActivity(intent);
+            }
+        });
+
         
