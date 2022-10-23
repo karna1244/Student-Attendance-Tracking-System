@@ -66,7 +66,19 @@ public class StudentEnrolledCoursesActivity extends AppCompatActivity {
         });
     }
 
- 
+    private void updatePassword() {
+        String password = getIntent().getStringExtra("PASSWORD");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("UserDetails").child("Student");
+        String studentID = FirebaseAuth.getInstance().getUid();
+        try {
+            Map<String, Object> hashMap = new HashMap<>();
+            hashMap.put("pass", password);
+            myRef.child(studentID).updateChildren(hashMap);
+        } catch (Exception e) {
+
+        }
+    }
 
    
     
