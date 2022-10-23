@@ -32,4 +32,18 @@ public class ProfessorLogin extends AppCompatActivity {
     ProgressDialog progressDialog;
 
 
-    
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_professor_login);
+
+        resetPassword = findViewById(R.id.id_resetpassword);
+        login = findViewById(R.id.id_login);
+        createaccount = findViewById(R.id.id_createaccount);
+        showpassword = findViewById(R.id.id_showpassword);
+        enter_username = findViewById(R.id._id_enter_username);
+        enter_paswword = findViewById(R.id._id_enter_paswword);
+        backButton = findViewById(R.id.id_back);
+
+
+        
