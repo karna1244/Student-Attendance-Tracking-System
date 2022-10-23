@@ -46,4 +46,14 @@ public class ProfessorLogin extends AppCompatActivity {
         backButton = findViewById(R.id.id_back);
 
 
+        resetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfessorLogin.this, ResetActivity.class);
+                intent.putExtra("RESET", "PROFESSOR");
+                startActivity(intent);
+            }
+        });
+
+
         
